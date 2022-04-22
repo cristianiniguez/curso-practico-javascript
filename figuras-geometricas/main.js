@@ -1,5 +1,7 @@
 // @ts-check
 
+// FUNCTIONS
+
 // Square
 
 /**
@@ -64,4 +66,24 @@ function circlePerimeter(radius) {
  */
 function circleArea(radius) {
   return Math.PI * radius * radius;
+}
+
+// EVENTS
+
+function calculateSquarePerimeter() {
+  const input = document.getElementById('square-side');
+  if (!(input instanceof HTMLInputElement)) return;
+
+  const side = parseFloat(input.value);
+  const perimeter = squarePerimeter(side);
+  alert(perimeter);
+}
+
+function calculateSquareArea() {
+  const input = document.getElementById('square-side');
+  if (!(input instanceof HTMLInputElement)) return;
+
+  const side = parseFloat(input.value);
+  const area = squareArea(side);
+  alert(area);
 }
