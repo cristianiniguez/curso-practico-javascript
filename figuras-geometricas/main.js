@@ -1,55 +1,67 @@
+// @ts-check
+
 // Square
 
-console.group('Square');
+/**
+ * @param {number} side
+ * @returns number
+ */
+function squarePerimeter(side) {
+  return side * 4;
+}
 
-const squareSide = 5;
-console.log(`Square sides are ${squareSide}cm`);
-
-const squarePerimeter = squareSide * 4;
-console.log(`Square perimeter is ${squarePerimeter}cm`);
-
-const squareArea = squareSide * squareSide;
-console.log(`Square area is ${squareArea}cm^2`);
-
-console.groupEnd('Square');
+/**
+ * @param {number} side
+ * @returns {number}
+ */
+function squareArea(side) {
+  return side * side;
+}
 
 // Triangle
 
-console.group('Triangle');
+/**
+ * @param {number} side1
+ * @param {number} side2
+ * @param {number} base
+ * @returns {number}
+ */
+function trianglePerimeter(side1, side2, base) {
+  return side1 + side2 + base;
+}
 
-const triangleSide1 = 6;
-const triangleSide2 = 6;
-const triangleBase = 4;
-console.log(`Triangle sides are ${triangleSide1}cm, ${triangleSide2}cm and ${triangleBase}cm`);
-
-const triangleHeight = 5.5;
-console.log(`Triangle height is ${triangleHeight}cm`);
-
-const trianglePerimeter = triangleSide1 + triangleSide2 + triangleBase;
-console.log(`Triangle perimeter is ${trianglePerimeter}cm`);
-
-const triangleArea = (triangleBase * triangleHeight) / 2;
-console.log(`Triangle area is ${triangleArea}cm^2`);
-
-console.groupEnd('Triangle');
+/**
+ * @param {number} base
+ * @param {number} height
+ * @returns {number}
+ */
+function triangleArea(base, height) {
+  return (base * height) / 2;
+}
 
 // Circle
 
-console.group('Circle');
+/**
+ * @param {number} radius
+ * @returns {number}
+ */
+function circleDiameter(radius) {
+  return radius * 2;
+}
 
-const circleRadius = 4;
-console.log(`Circle radius is ${circleRadius}cm`);
+/**
+ * @param {number} radius
+ * @returns {number}
+ */
+function circlePerimeter(radius) {
+  const diameter = circleDiameter(radius);
+  return Math.PI * diameter;
+}
 
-const circleDiameter = circleRadius * 2;
-console.log(`Circle diameter is ${circleDiameter}cm`);
-
-const PI = Math.PI;
-console.log(`PI is ${PI}`);
-
-const circlePerimeter = PI * circleDiameter;
-console.log(`Circle perimeter is ${circlePerimeter}cm`);
-
-const circleArea = PI * circleRadius * circleRadius;
-console.log(`Circle area is ${circleArea}cm^2`);
-
-console.groupEnd('Circle');
+/**
+ * @param {number} radius
+ * @returns {number}
+ */
+function circleArea(radius) {
+  return Math.PI * radius * radius;
+}
