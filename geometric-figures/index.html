@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workshop #1: Geometric figures</title>
+    <link href="https://bootswatch.com/5/zephyr/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="py-4 text-center">
+      <div class="container">
+        <h1>Geometric figures</h1>
+        <p>This is the first workshop of the Platzi's JavaScript practical course</p>
+      </div>
+    </header>
+
+    <main class="py-4">
+      <section class="mb-4">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title h4 m-0">Calculate the area and perimeter of an square</h2>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="mb-4">
+                  <label class="form-label" for="square-side">
+                    Write the length of your square:
+                  </label>
+                  <input class="form-control" id="square-side" type="number" min="0" value="1" />
+                </div>
+                <button class="btn btn-primary" onclick="calculateSquarePerimeter()">
+                  Calculate the perimeter
+                </button>
+                <button class="btn btn-primary" onclick="calculateSquareArea()">
+                  Calculate the area
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title h4 m-0">Calculate the area and perimeter of a triangle</h2>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="mb-4">
+                  <label class="form-label" for="triangle-side-1">
+                    Write the first side length of your triangle:
+                  </label>
+                  <input
+                    class="form-control"
+                    id="triangle-side-1"
+                    type="number"
+                    min="0"
+                    value="1"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="triangle-side-2">
+                    Write the second side length of your triangle:
+                  </label>
+                  <input
+                    class="form-control"
+                    id="triangle-side-2"
+                    type="number"
+                    min="0"
+                    value="1"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="triangle-side-3">
+                    Write the third side length of your triangle:
+                  </label>
+                  <input
+                    class="form-control"
+                    id="triangle-side-3"
+                    type="number"
+                    min="0"
+                    value="1"
+                  />
+                </div>
+                <button class="btn btn-primary" onclick="calculateTrianglePerimeter()">
+                  Calculate the perimeter
+                </button>
+                <button class="btn btn-primary" onclick="calculateTriangleArea()">
+                  Calculate the area
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title h4 m-0">Calculate the area and perimeter of a circle</h2>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="mb-4">
+                  <label class="form-label" for="circle-radius">
+                    Write the radius of your circle:
+                  </label>
+                  <input class="form-control" id="circle-radius" type="number" min="0" value="1" />
+                </div>
+                <button class="btn btn-primary" onclick="calculateCirclePerimeter()">
+                  Calculate the perimeter
+                </button>
+                <button class="btn btn-primary" onclick="calculateCircleArea()">
+                  Calculate the area
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
