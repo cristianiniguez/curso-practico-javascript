@@ -15,7 +15,45 @@
       </div>
     </header>
 
-    <main class="py-4"></main>
+    <main class="py-4">
+      <section>
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title h4 m-0">
+                Calculate the price to pay of your products with discount
+              </h2>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="mb-4">
+                  <label class="form-label" for="input-price">
+                    Write the price of your product
+                  </label>
+                  <input class="form-control" id="input-price" type="number" />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="input-discount">
+                    Write the price of your product
+                  </label>
+                  <input class="form-control" id="input-discount" type="number" />
+                </div>
+
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  onclick="onClickButtonPriceDiscount()"
+                >
+                  Calculate the price with discount
+                </button>
+
+                <p class="my-0 mt-4 text-success text-center" id="result"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="./main.js"></script>
   </body>
