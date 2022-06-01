@@ -32,3 +32,25 @@ function calculateMedian(list) {
 
   return median;
 }
+
+/**
+ * @param {number[]} list
+ * @returns {number} mode
+ */
+function calculateMode(list) {
+  /**
+   * @type {{[key: number]: number}}
+   */
+  const listCount = {};
+  list.forEach(function (element) {
+    if (listCount[element]) {
+      listCount[element] += 1;
+    } else {
+      listCount[element] = 1;
+    }
+  });
+
+  const listArray = Object.entries(listCount).sort(([, a], [, b]) => a - b);
+  const mode = listArray[listArray.length - 1][0];
+  return +mode;
+}
